@@ -11,3 +11,18 @@ Seção 2 - aula 7 - Link https://www.udemy.com/curso-javascript-do-futuro/learn
 	Commands Git
 	-- git checkout -b ES6ClassesMyJob - new branch
 	-- git log - log de execução do Git
+
+	Commands Lint
+	-- npm run lint -- --init - inicializar o Lint
+	
+	configurações do Lint (File .eslintrc.json)	
+	"rules": {
+        "no-underscore-dangle": 0,
+        "no-console": 0
+    }
+	-- npm run lint -- --fix file a ser executado - realiza uma padronização
+		no file.	
+
+Seção 2 - aula 8 - Link https://www.udemy.com/curso-javascript-do-futuro/learn/v4/t/lecture/6729044?start=0
+
+Seção 2 - aula 9 - Link https://www.udemy.com/curso-javascript-do-futuro/learn/v4/t/lecture/6729048?start=0
