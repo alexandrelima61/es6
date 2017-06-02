@@ -1,0 +1,10 @@
+Curso JavaScript do Futuro
+Aula ES6 - Class
+Seção 2 - aula 5 - Link https://www.udemy.com/curso-javascript-do-futuro/learn/v4/t/lecture/6729030?start=0
+	-- install node_module => npm i
+	-- executar terminal => npm start
+	
+Seção 2 - aula 6 - Link https://www.udemy.com/curso-javascript-do-futuro/learn/v4/t/lecture/6729032?start=0
+
+
+Seção 2 - aula 7 - Link https://www.udemy.com/curso-javascript-do-futuro/learn/v4/t/lecture/6729042?start=0
