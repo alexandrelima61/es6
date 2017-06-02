@@ -9,8 +9,11 @@ class Message {
   }
 
   set created(created) {
-    if (!created || isNaN(created)) {
+    if (typeof created === 'undefined' || isNaN(created)) {
       throw new Error('Invalid created');
+    }
+    if (Message.prototype.hasOwnProperty.call(this, '_created')) {
+      throw new Error('Created already defined');
     }
     this._created = created;
   }
@@ -18,10 +21,15 @@ class Message {
   toString() {
     return `Message created at: ${this.created} - Text: ${this.text}`;
   }
+
+  static newEmptyMessage() {
+    return new Message();
+  }
 }
 
 class ImageMessage extends Message {
-  constructor(text = '', created = Date.now(), url = '', thumbnail = '') {
+  constructor(text = '', created = Date.now(),
+    url = '', thumbnail = '') {
     super(text, created);
     this.url = url;
     this.thumbnail = thumbnail;
@@ -29,24 +37,24 @@ class ImageMessage extends Message {
 
   toString() {
     return `Photo${super.toString()}` +
-           `- Url: ${this.url}` +
-           `- Thumbnail: ${this.thumbnail}`;
+      `- Url: ${this.url}` +
+      `- Thumbnail: ${this.thumbnail}`;
   }
 }
 
-var text = 'Some text';
-var created = Date.now();
+const text = 'Some text';
+const created = Date.now();
 
-var duckTypeMessage = {
+const duckTypeMessage = {
   text,
-  created
+  created,
 };
 
 console.log(duckTypeMessage);
 
-var emptyMessage = new Message();
-var textMessage = new Message('Yesterday message', Date.now() - 86400)
-var photoMessage = new ImageMessage();
+const emptyMessage = new Message();
+const textMessage = new Message('Yesterday message', Date.now() - 86400);
+const photoMessage = new ImageMessage();
 
 console.log(String(emptyMessage));
 console.log(String(textMessage));
