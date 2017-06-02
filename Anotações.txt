@@ -8,3 +8,6 @@ Seção 2 - aula 6 - Link https://www.udemy.com/curso-javascript-do-futuro/learn
 
 
 Seção 2 - aula 7 - Link https://www.udemy.com/curso-javascript-do-futuro/learn/v4/t/lecture/6729042?start=0
+	Commands Git
+	-- git checkout -b ES6ClassesMyJob - new branch
+	-- git log - log de execução do Git
